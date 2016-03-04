@@ -49,11 +49,11 @@ public class AbstractDao<T, PK extends Serializable> {
 		getSession().update(entity);
 	}
 
-	public int delete(PK id) {
+	public void delete(PK id) {
 		String hql = "DELETE FROM " + persistentClass.getName() + " c where c.id = :id";
 		Query q = getSession().createQuery(hql);
 		q.setParameter("id", id);
-		return q.executeUpdate();
+		q.executeUpdate();
 	}
 
 	protected Criteria createEntityCriteria(String alias) {

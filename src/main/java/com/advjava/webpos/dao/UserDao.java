@@ -25,8 +25,9 @@ public class UserDao extends AbstractDao<User, Integer> {
 		return getUser(id);
 	}
 
-	public int deleteUser(Integer id) {
-		return delete(id);
+	public void deleteUser(Integer id) {
+		delete(id);
+		
 	}
 
 	public User getUserByUsername(String username) {

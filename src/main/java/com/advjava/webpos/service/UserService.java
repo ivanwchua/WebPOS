@@ -31,8 +31,8 @@ public class UserService {
 		return userDao.createUser(u);
 	}
 
-	public int deleteUser(Integer id) {
-		return userDao.deleteUser(id);
+	public void deleteUser(Integer id) {
+		userDao.deleteUser(id);
 	}
 
 	public boolean checkUsername(String username) {

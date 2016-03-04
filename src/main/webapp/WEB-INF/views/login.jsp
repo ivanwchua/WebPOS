@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <%@ include file="topInclude.jsp" %>
+<link rel='stylesheet' href='resources/css/signin.css'>
 <title>IWC Web POS - login</title>
 </head>
 <body>
@@ -14,27 +15,12 @@
       <form class="form-signin" method="POST" action="login">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputUsername" class="sr-only">Username</label>
-        <input type="text" id="inputUsername" class="form-control" placeholder="Username" required="" autofocus="">
+        <input type="text" id="inputUsername" class="form-control" placeholder="Username" name="username" required="" autofocus="">
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required="">
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
     </div>
-    <div style="color:red">${error}</div>
-	<%-- <form method="POST" action="/webpos/login">
-		Username: <input name="username" type="text" placeholder="username"/> <br>
-		Password: <input name="password" type="password" placeholder="password"/> <br>
-		<input type="submit" value="Submit" />
-		
-	</form>
-	
-	<form:form method="POST" action="/login" name="loginForm">
-		<form:label path="username">username: </form:label>
-		<form:input path="username" />
-		<form:label path="password">password: </form:label>
-		<form:input path="password" />
-		<input type="submit" value="Submit" />
-		<div style="color:red">${error}</div>
-	</form:form> --%>
+    <div class="container form-signin" style="color:red">${error}</div>
 </body>
 </html>
